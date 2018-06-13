@@ -1,0 +1,37 @@
+#realdeal {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 100px;
+	color: white;
+}
+
+#endofspeech{
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 100px;
+	color: white;
+}
+
+#samefont {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 100px;
+	color: white;
+}
+
+.form-group {
+	margin-top: 100px;
+}
+
+.navbar-light .navbar-brand {
+	font-family: 'Gugi', cursive;
+	color: white;
+	font-size: 25px;
+	margin-top: 8px;
+}
+
+.form-group label {
+	font-size: 25px;
+}
+
+#by {
+	font-family: 'Italianno', cursive;
+	text-align: center;
+}

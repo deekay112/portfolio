@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<!-- Google Analytics -->
+	<script>
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-120799171-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
+	<!-- End Google Analytics -->
+	
+	<title>Doyin Kareem | Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	
+	<link href="https://fonts.googleapis.com/css?family=Concert+One|Great+Vibes|Varela+Round|Merriweather|Playfair+Display" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tools/1.2.7/jquery.tools.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    
+    <link rel="stylesheet" href="/stylesheet/home/main.css">
+
+</head>
+<body>
+
+
+	<div id="one" class="row">
+		
+		<div class="col-md-1 col-xs-2">
+			<img id="bulb" src="/rsc/home/off-rotate.gif">
+		</div>
+		<div class="col-md-1 col-xs-1">
+			<br>
+		</div>
+		<div class="col-md-8 col-xs-6 text-center" id="message">
+			<p>
+				It's Dark, 
+			</p>
+			<p>
+				Pull String to turn on the light....
+			</p>
+			<p>
+				Thanks!
+			</p>
+		</div>
+		<div class="col-md-1 col-xs-2" id="chaindiv">
+			<img id="drag" itemprop="image" src="/rsc/home/chain.JPG" align="right">
+		</div>
+		<div class="col-md-1 col-xs-1">
+			<br>
+		</div>
+		
+	</div>
+	
+	
+	<div id="first" class="col-lg-7 col-md-7 col-sm-8 col-xs-8 hide">
+			
+		<div class="intro">
+			<h2>Hi!</h2>
+			<h3>I'm Doyin Kareem,</h3>
+			<h3><strong>a web dev enthusiast.</strong></h3>
+			<h3>Here are some of my projects</h3>
+		</div>	
+		
+		<ul class="projectlist">
+		  <li class=""><a href="/tmr" target="_blank">The Movie Review</a></li>
+		  <li class=""><a href="/colorgame" target="_blank">Color Game</a></li>
+		  <li class=""><a href="/teleprompter" target="_blank">Teleprompter</a></li>
+		</ul>
+			
+	</div>
+		
+		
+	<div id="second" class="col-lg-5 col-md-5 col-sm-4 col-xs-4 hide">
+		<span class="linkedinspan">
+			<a href="https://www.linkedin.com/in/doyin-kareem-687021b0/" target="_blank">
+	 			<i class="fab fa-linkedin-in"></i>
+	 		</a>
+		</span>
+		<span class="emailspan">
+				<a href="mailto:info@doyinkareem.com" target="_blank">
+		 			<i class="fas fa-envelope"></i>
+		 		</a>
+		</span>
+	</div>
+			
+	<script>
+            $( function() {
+            
+                $("#drag").draggable({
+                	axis: "y",
+                	revert: true,
+                	stop: function () {
+                		
+                		$("#one, #first, #second").toggleClass("hide");
+                		$("body").css("background", "linear-gradient(rgba(198, 67, 55, 0.7), rgba(198, 67, 55, 0.7))," +
+                		"url('https://images.unsplash.com/photo-1520085601670-ee14aa5fa3e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cdc4d332eab7ae54a6449ef4918730f5&auto=format&fit=crop&w=1500&q=80')");
+                
+                	
+                	}  	
+            
+                });
+                	
+            }); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+html,body {
+  overflow: hidden;
+}
+
+body {
+  background-color: black;
+}
+
+#drag {
+  max-height: 100em;
+}
+
+#chaindiv {
+  top: -1050px;
+}
+
+#myintro {
+  font-family: 'Noticia Text', serif;
+  font-size: 30px;
+  padding-top: 1em;
+  font-style: italic;
+}
+
+#bulb {
+  max-height: 200px;
+}
+
+#message {
+  color: white;
+  font-size: 60px;
+  font-family: 'Great Vibes', cursive;
+  padding-top: 3em;
+}
+
+#first {
+  background-color: rgba(13, 107, 147, 0.8);
+  height: 100vh;
+  transform: skew(-20deg);
+  transform-origin: 50% 0%;
+}
+
+.intro {
+  font-family: 'Merriweather', serif;
+  color: white;
+  font-weight: 900;
+  margin-left: 65px;
+  margin-top: 30px;
+  transform: skew(20deg);
+}
+
+.intro h2 {
+  font-size: 9rem;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+.intro h3 {
+  font-size: 3.8rem;
+}
+
+.projectlist {
+  transform: skew(20deg);
+  margin: 100px 60px 0px 175px;
+}
+
+.projectlist li {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: white;
+}
+
+.projectlist li a {
+  color: white;
+}
+
+a .fa-linkedin-in {
+	color: white;
+	font-size: 3rem;
+	position: absolute;
+	right: 28%;
+	top: 20%;
+}
+
+a .fa-envelope {
+	color: white;
+	font-size: 3rem;
+	position: absolute;
+	right: 26%;
+	top: 24%;
+}
+
+.linkedinspan {
+    height: 60px;
+    width: 60px;
+    background-color: rgba(13, 107, 147, 0.8);
+    border-radius: 50%;
+    display: inline-block;
+  	right: 3vw;
+  	top: 88vh;
+  	position: absolute;
+}
+
+.emailspan {
+    height: 60px;
+    width: 60px;
+    background-color: rgba(13, 107, 147, 0.8);
+    border-radius: 50%;
+    display: inline-block;
+  	right: 3vw;
+  	top: 78vh;
+  	position: absolute;
+}
+
+@media only screen and (max-width: 768px) {
+    
+  .col-sm-8, .col-xs-8 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 1px;
+    padding-left: 1px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #first {
+    background-color: rgba(13, 107, 147, 0.8);
+    height: 120vh;
+    position: fixed;
+    transform: rotate(90deg);
+    transform-origin: 75% 25%;
+  }
+
+  .intro {
+    transform: rotate(-90deg);
+    margin-top: 90px;
+    margin-left: 130px;
+    position: relative;
+    width: 100vw;
+  }
+
+  .intro h2 {
+    font-size: 7rem;
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+
+  .intro h3 {
+    font-size: 2.8rem;
+  }
+
+  .projectlist {
+    transform: rotate(-90deg);
+    	/*margin: 100px 60px 0px 175px;*/
+    position: relative;
+    margin-top: -520px;
+    margin-right: -830px;
+  }
+
+  .projectlist li a {
+    color: white;
+  }
+
+  a .fa-linkedin-in {
+    	color: white;
+    	font-size: 3rem;
+    	position: absolute;
+    	right: 28%;
+    	top: 20%;
+    }
+
+    .linkedinspan {
+      height: 60px;
+      width: 60px;
+      background-color: rgba(13, 107, 147, 0.8);
+      border-radius: 50%;
+      display: inline-block;
+    	right: 3vw;
+    	top: 88vh;
+    	position: fixed;
+    }
+    
+    a .fa-envelope {
+    	color: white;
+    	font-size: 3rem;
+    	position: absolute;
+    	right: 25%;
+    	top: 24%;
+    }
+    
+    .emailspan {
+      height: 60px;
+      width: 60px;
+      background-color: rgba(13, 107, 147, 0.8);
+      border-radius: 50%;
+      display: inline-block;
+    	right: 3vw;
+    	top: 78vh;
+    	position: fixed;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    
+  .col-sm-8, .col-xs-8 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 1px;
+    padding-left: 1px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #first {
+    background-color: rgba(13, 107, 147, 0.8);
+    height: 120vh;
+    position: fixed;
+    transform: rotate(90deg);
+    transform-origin: 75% 25%;
+  }
+
+  .intro {
+    transform: rotate(-90deg);
+    margin-top: 150px;
+    margin-left: 80px;
+    position: relative;
+    width: 100vw;
+  }
+
+  .intro h2 {
+    font-size: 7rem;
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+
+  .intro h3 {
+    font-size: 2.8rem;
+  }
+
+  .projectlist {
+    transform: rotate(-90deg);
+    position: relative;
+    margin-top: -450px;
+    margin-right: -730px;
+  }
+
+  .projectlist li a {
+    color: white;
+  }
+
+  a i {
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    right: 28%;
+    top: 20%;
+  }
+
+  .linkedinspan {
+    height: 60px;
+    width: 60px;
+    background-color: rgba(13, 107, 147, 0.8);
+    border-radius: 50%;
+    display: inline-block;
+    right: 3vw;
+    top: 88vh;
+    position: fixed;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+    
+  .col-sm-8, .col-xs-8 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 1px;
+    padding-left: 1px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #first {
+    background-color: rgba(13, 107, 147, 0.8);
+    height: 120vh;
+    position: fixed;
+    transform: rotate(90deg);
+    transform-origin: 75% 25%;
+  }
+
+  .intro {
+    transform: rotate(-90deg);
+    margin-top: 157px;
+    margin-left: 50px;
+    position: relative;
+    width: 100vw;
+  }
+
+  .intro h2 {
+    font-size: 6.5rem;
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+
+  .intro h3 {
+    font-size: 2.5rem;
+  }
+
+  .projectlist {
+    transform: rotate(-90deg);
+    position: relative;
+    margin-top: -390px;
+    margin-right: -610px;
+  }
+
+  .projectlist li a {
+    color: white;
+  }
+
+  a i {
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    right: 28%;
+    top: 20%;
+  }
+
+  .linkedinspan {
+    height: 60px;
+    width: 60px;
+    background-color: rgba(13, 107, 147, 0.8);
+    border-radius: 50%;
+    display: inline-block;
+    right: 3vw;
+    top: 88vh;
+    position: fixed;
+  }
+}
+
+.hide {
+  display: none;
+}

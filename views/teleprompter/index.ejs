@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<!-- Google Analytics -->
+	<script>
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-120799171-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
+	<!-- End Google Analytics -->
+	
+	<title>Doyin Kareem | Teleprompter</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/stylesheet/teleprompter/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Gugi|IBM+Plex+Sans:700|Italianno" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tools/1.2.7/jquery.tools.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <style type="text/css">
+	::-webkit-scrollbar {width: 6px; height: 4px; background: #000000; }
+	::-webkit-scrollbar-thumb { background-color: #000000; -webkit-border-radius: 1ex; }
+	</style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-light bg-dark justify-content-between sticky-top">
+  		<!-- <a class="navbar-brand">The Great Teleprompter</a> -->
+  		<h4 class="navbar-brand">The Great Teleprompter</h4>
+		<form class="form-inline">
+		    <a class="btn btn-outline-secondary my-2 my-sm-0" href="https://www.google.com/search?q=lorem+ipsum" target="_blank">Google Lorem Ipsum</a>
+		</form>
+</nav>
+
+<div class="firstdiv container">
+		<form>
+		<div class="form-group text-center">
+   			<label for="speechdiv">Enter speech or text to Teleprompt</label>
+    		<textarea class="form-control" id="speechdiv" rows="9"></textarea>
+  		</div>
+	</form>
+</div>
+
+
+<div class="seconddiv row">
+	<div class="col-md-12 text-center">
+		<h4 class="btn btn-dark btn-md text-center" id="now">Teleprompt</h4>
+	</div>
+</div>
+
+
+<h2 id="realdeal"></h2>
+<div id="endofspeech" class="text-center"></div>
+
+<script>
+	$("#now").click(function () {
+
+	var end = " <br> "
+	var speech = $('#speechdiv').val()
+	var duration = (speech.length * 400);
+
+	$(".firstdiv").remove();
+	$(".seconddiv").remove();
+	$("body").css("background-color", "black")
+
+	$("#realdeal").text(speech);
+	$("#endofspeech").html("<br>"+ "<br>"+ "<br>"+ "<h2 id='samefont'>The End</h2>" + "<h2 id='by'>by Doyin Kareem</h2>" + "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>");
+
+	$('html').animate({
+        scrollTop: $(document).height()
+    }, duration);
+});
+</script>
+
+</body>
+</html>

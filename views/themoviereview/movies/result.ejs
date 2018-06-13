@@ -1,0 +1,51 @@
+<% include ../partials/header %>
+
+
+
+
+
+    
+    
+    <div class="container text-center">
+        <hr>
+        <h1>Movies with title matching <em>"<%=userInput%>"</em></h1>
+        <hr>
+        <br>
+       <div class=row>
+           
+        
+        <% movieData.forEach(function(movie){ %> 
+        
+        <div class="col-md-4">
+            <div class="thumbnail resultthumbnail">
+                <form action="/tmr/movies/new/<%=movie["imdbID"]%>" method="GET">
+                <div class="caption">
+                    <p><%=movie["Title"]%></p>
+                </div>
+                
+                <% if (movie["Poster"] != "N/A") { %>
+                    <img src="<%=movie["Poster"]%>">
+
+                <% } else { %>
+                    <img src="https://dummyimage.com/350x448&text=Image+Is+Unavailable"> 
+                <% } %>
+                
+                
+                <button class="btn btn-primary btn-md">Add Movie</button>
+            </form>
+            </div>
+        </div>
+
+    <% }) %>
+        </div>
+    
+   
+           
+   
+    </div>
+    
+    
+
+
+
+<% include ../partials/footer %>

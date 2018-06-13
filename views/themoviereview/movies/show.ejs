@@ -1,0 +1,174 @@
+<% include ../partials/header %>
+
+
+<div class="container">
+  <div class="row">
+    
+      <div class="col-md-1">
+      </div>
+      
+      <div class="col-md-10">
+        <div class="row thumbnail showthumbnail">
+          
+            <div class="col-md-4 showcoldiv">
+              <img src="<%= foundImage.image %>" class="img-responsive showimage" alt="Image">
+              <h4 class="text-center"> <i> Submitted by <%=foundImage.author.username%> </i> </h4> 
+              
+            </div>
+            
+            <div class="col-md-8">
+              <h1><%=foundImage.moviename%> (<%=foundImage.year%>)</h1> 
+              <p><%=foundImage.rated%> | <%=foundImage.runtime%> | <%=foundImage.genre%> | <%=foundImage.released%> (<%=foundImage.country%>)</p>
+              <hr>
+              <h4><i><%= foundImage.description %></i></h4>
+              <br>
+              <p>Director: <%= foundImage.director %></p>
+              <p>Writer(s): <%= foundImage.writer %></p>
+              <p>Stars: <%= foundImage.actors %></p>
+              <p>Genre: <%= foundImage.genre %></p>
+              <p>Rated: <%= foundImage.rated %></p>
+              <p>Language: <%= foundImage.language %></p>
+              <p>Type: <%= foundImage.type %></p>
+              <% if(newUser != null && newUser.username == foundImage.author.username)  { %> 
+                    <div>
+                        <form action="/tmr/movies/<%= foundImage._id %>?_method=DELETE" method="POST">
+                            <input class="btn btn-danger btn-sm" id="showdeletebutton" type="submit" value="Delete Movie">
+                        </form>
+                    </div>
+              <%}%>
+            </div>
+            
+        </div>
+      </div>
+      
+      <div class="col-md-1">
+      </div>
+  
+  </div>
+</div>
+
+
+
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-1">
+      </div>
+      
+      <div class="col-md-10 well">
+        <form action="/tmr/movies/<%= foundImage._id %>" method="POST">
+          <!-- Trigger the modal with a button -->
+          <% if(newUser != null)  { %> 
+            <a class="btn btn-success btn-sm addcommentbutton" data-toggle="modal" data-target="#myModal">Add a Review</a>
+          <% } else { %>
+            <a class="btn btn-success btn-sm addcommentbutton" href="/tmr/login">Add Comment</a>
+          <% } %>   
+                    <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+              
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Comment on <%=foundImage.moviename%></h4>
+                </div>
+                <div class="modal-body">
+          			  <textarea class="form-control" rows="5" id="comment" name="comment" ></textarea>
+                </div>
+                <div class="modal-footer">
+                  <input type="submit" class="btn btn-default">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>  
+        </form>
+        
+                <!--Comments Section-->
+        <%returnComments.forEach(function(comment) { %>
+          <hr>
+        
+          <!-- Trigger the modal with a button -->
+          
+          
+          
+            <h4>   <%=comment.author.username%></h4>
+            
+            <p id="posttimestap">
+            <%=moment([comment.createdAt.getFullYear(), comment.createdAt.getMonth(), comment.createdAt.getDate(), comment.createdAt.getHours(), comment.createdAt.getMinutes()]).fromNow() %>
+          </p>
+          <p>   <%=comment.text%></p>
+            
+            
+          
+            
+            
+            
+          <div>
+            <% if(newUser != null && newUser.username == comment.author.username)  { %> 
+            <div class="row">
+                  <div class="col-md-1">
+                    <form action="/tmr/movies/<%= foundImage._id %>/comment/<%= comment._id %>?_method=PUT" method="POST">
+                      <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#<%= comment._id %>">Edit</button>
+                        <!-- Comment Modal -->
+                        <div class="modal fade" id="<%= comment._id %>" role="dialog">
+                          <div class="modal-dialog">
+                                
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  <h4 class="modal-title">Edit Comment on <%=foundImage.moviename%></h4>
+                                </div>
+                                <div class="modal-body">
+                              			<textarea class="form-control" rows="5" id="comment" name="commentUpdate" ><%=comment.text%></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                  <input type="submit" class="btn btn-default">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                                  
+                          </div>
+                      </div>
+                  </form>
+                  </div>
+                
+                  <div class="col-md-1">
+                    <form action="/tmr/movies/<%= foundImage._id %>/comment/<%= comment._id %>?_method=DELETE" method="POST">
+                          <input class="btn btn-danger btn-xs" type="submit" value="Delete">
+                    </form>
+                  </div>
+                
+              </div>
+              
+                
+            <% }  %> 
+          </div>
+  
+        <% }) %>
+      </div>
+      
+      <div class="col-md-1">
+      </div>
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% include ../partials/footer %>
